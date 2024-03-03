@@ -73,7 +73,7 @@ export default function Home() {
   );
 
 }
-export const products = [
+const products = [
   {
     title: "",
     link: "",
