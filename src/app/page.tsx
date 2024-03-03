@@ -6,10 +6,12 @@ import { motion } from "framer-motion";
 import { LampContainer } from "../components/ui/lamp";
 import { Meteors } from "../components/ui/meteros";
 import { SparklesCore } from "@/components/ui/sparkles";
+import { HeroParallax } from "@/components/ui/hero-parralex";
+import { Tabs } from "@/components/ui/tabs";
 
 export default function Home() {
   return (
-    <main className="relative w-full h-screen bg-black">
+    <main className="relative w-full h-screen bg-slate-950">
       <LampContainer>
         <motion.h1
           initial={{ opacity: 0.5, y: 100 }}
@@ -21,7 +23,7 @@ export default function Home() {
           }}
           className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
         >
-          <div className="h-[40rem] relative w-full bg-black bg-opacity-0 flex flex-col items-center justify-center overflow-hidden rounded-md">
+          <div className="h-[40rem] relative w-screen bg-black bg-opacity-0 flex flex-col items-center justify-center overflow-hidden rounded-md">
             <div className="w-full absolute inset-0 h-screen">
               <SparklesCore
                 id="tsparticlesfullpage"
@@ -29,7 +31,7 @@ export default function Home() {
                 minSize={0.6}
                 maxSize={1.4}
                 particleDensity={100}
-                className="w-full h-full"
+                className="w-screen h-full"
                 particleColor="#089CFF"
               />
             </div>
@@ -54,9 +56,177 @@ export default function Home() {
         </motion.h1>
       </LampContainer>
 
+      <div className="bg-slate-950">
+        <HeroParallax products={products} />
+      </div>
+      <div className="h-full w-full bg-slate-950">
+        <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-40">
+          <Tabs tabs={tabs} />
+        </div>
+      </div>
 
 
-      {/* <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+    </main>
+    // <div>
+    //   <SignupFormDemo />
+    // </div>
+  );
+
+}
+export const products = [
+  {
+    title: "",
+    link: "",
+    thumbnail:
+      "/HslogoCropped.jpg",
+  },
+  {
+    title: "",
+    link: "",
+    thumbnail:
+      "/H3SLogo.png",
+  },
+  {
+    title: "",
+    link: "",
+    thumbnail:
+      "/HslogoCropped.jpg",
+  },
+  {
+    title: "",
+    link: "",
+    thumbnail:
+      "/next.svg",
+  },
+  {
+    title: "",
+    link: "",
+    thumbnail:
+      "/HslogoCropped.jpg",
+  },
+  {
+    title: "",
+    link: "",
+    thumbnail:
+      "/H3SLogo.png",
+  },
+  {
+    title: "",
+    link: "",
+    thumbnail:
+      "/HslogoCropped.jpg",
+  },
+  {
+    title: "",
+    link: "",
+    thumbnail:
+      "/next.svg",
+  },
+  {
+    title: "",
+    link: "",
+    thumbnail:
+      "/HslogoCropped.jpg",
+  },
+  {
+    title: "",
+    link: "",
+    thumbnail:
+      "/H3SLogo.png",
+  },
+  {
+    title: "",
+    link: "",
+    thumbnail:
+      "/HslogoCropped.jpg",
+  },
+  {
+    title: "",
+    link: "",
+    thumbnail:
+      "/next.svg",
+  },
+  {
+    title: "",
+    link: "",
+    thumbnail:
+      "/HslogoCropped.jpg",
+  },
+  {
+    title: "",
+    link: "",
+    thumbnail:
+      "/H3SLogo.png",
+  },
+
+];
+
+const DummyContent = () => {
+  return (
+    <Image
+      src="/HslogoCropped.jpg"
+      alt="dummy image"
+      width="1000"
+      height="1000"
+      className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
+    />
+  );
+};
+
+const tabs = [
+  {
+    title: "Product",
+    value: "product",
+    content: (
+      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-cyan-500 to-blue-500">
+        <p>Product Tab</p>
+        <DummyContent />
+      </div>
+    ),
+  },
+  {
+    title: "Services",
+    value: "services",
+    content: (
+      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-cyan-500 to-blue-5000">
+        <p>Services tab</p>
+        <DummyContent />
+      </div>
+    ),
+  },
+  {
+    title: "Playground",
+    value: "playground",
+    content: (
+      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-cyan-500 to-blue-5000">
+        <p>Playground tab</p>
+        <DummyContent />
+      </div>
+    ),
+  },
+  {
+    title: "Content",
+    value: "content",
+    content: (
+      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-cyan-500 to-blue-5000">
+        <p>Content tab</p>
+        <DummyContent />
+      </div>
+    ),
+  },
+  {
+    title: "Random",
+    value: "random",
+    content: (
+      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-cyan-500 to-blue-5000">
+        <p>Random tab</p>
+        <DummyContent />
+      </div>
+    ),
+  },
+];
+
+{/* <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
         <Image
           className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
           src="/next.svg"
@@ -136,10 +306,4 @@ export default function Home() {
           </p>
         </a>
       </div> */}
-      {/* <Meteors number={20} /> */}
-    </main>
-    // <div>
-    //   <SignupFormDemo />
-    // </div>
-  );
-}
+{/* <Meteors number={20} /> */ }
