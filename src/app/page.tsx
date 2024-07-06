@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { CardBody, CardContainer, CardItem } from "../components/ui/3dCard";
 import { motion } from "framer-motion";
 import { LampContainer } from "../components/ui/lamp";
-import { Meteors } from "../components/ui/meteros";
+import { Vortex } from "@/components/ui/vortex";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { HeroParallax } from "@/components/ui/hero-parralex";
 import { Tabs } from "@/components/ui/tabs";
@@ -16,7 +16,7 @@ export default function Home() {
   const words = [
     {
       text: "H3S",
-      className: "text-[#089CFF] dark:text-blue-500",
+      className: "text-cyan-500 dark:text-blue-500",
     },
     {
       text: " - ",
@@ -60,7 +60,7 @@ export default function Home() {
                 particleColor="#089CFF"
               />
             </div>
-            <CardContainer className="inter-var z-10 -top-10 h-0 bottom-0">
+            <CardContainer className="inter-var z-10 -top-20 h-0 bottom-0">
               <CardBody className="bg-transparent bg-opacity-0 relative group/card  dark:bg-transparent w-auto sm:w-[30rem] h-auto rounded-xl p-6">
                 <CardItem translateZ="100" className="w-full mt-4">
                   <Image
@@ -81,6 +81,27 @@ export default function Home() {
 
         </motion.h1>
       </LampContainer>
+      <Vortex
+        backgroundColor="transparent"
+        rangeY={800}
+        particleCount={500}
+        baseHue={120}
+        className="flex items-center flex-col justify-center px-2 md:px-10  py-4 w-full h-full"
+      >
+        <h2 className="text-white text-2xl md:text-6xl font-bold text-center">
+          The hell is this?
+        </h2>
+        <p className="text-white text-sm md:text-2xl max-w-xl mt-6 text-center">
+          This is chemical burn. It&apos;ll hurt more than you&apos;ve ever been
+          burned and you&apos;ll have a scar.
+        </p>
+        <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
+          <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
+            Order now
+          </button>
+          <button className="px-4 py-2  text-white ">Watch trailer</button>
+        </div>
+      </Vortex>
 
       <div className="bg-slate-950">
         <HeroParallax products={products} />
