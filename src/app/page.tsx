@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { CardBody, CardContainer, CardItem } from "../components/ui/3dCard";
 import { motion } from "framer-motion";
 import { LampContainer } from "../components/ui/lamp";
@@ -8,10 +8,35 @@ import { Meteors } from "../components/ui/meteros";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { HeroParallax } from "@/components/ui/hero-parralex";
 import { Tabs } from "@/components/ui/tabs";
+import { TypewriterEffect } from "@/components/ui/typewriter";
+import { HoveredLink, Menu, MenuItem, ProductItem } from "@/components/ui/urtaHuaNavbar"
+import { cn } from "@/utils/cn";
 
 export default function Home() {
+  const words = [
+    {
+      text: "H3S",
+      className: "text-[#089CFF] dark:text-blue-500",
+    },
+    {
+      text: " - ",
+    },
+    {
+      text: '"Your',
+    },
+    {
+      text: " Vision,",
+    },
+    {
+      text: " Our",
+    },
+    {
+      text: ' Code"',
+    },
+  ];
   return (
     <main className="relative w-full h-screen bg-slate-950">
+      <Navbar className="top-2" />
       <LampContainer>
         <motion.h1
           initial={{ opacity: 0.5, y: 100 }}
@@ -35,8 +60,8 @@ export default function Home() {
                 particleColor="#089CFF"
               />
             </div>
-            <CardContainer className="inter-var z-10">
-              <CardBody className="bg-black bg-opacity-0 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+            <CardContainer className="inter-var z-10 -top-10 h-0 bottom-0">
+              <CardBody className="bg-transparent bg-opacity-0 relative group/card  dark:bg-transparent w-auto sm:w-[30rem] h-auto rounded-xl p-6">
                 <CardItem translateZ="100" className="w-full mt-4">
                   <Image
                     src="/H3SLogo.png"
@@ -51,6 +76,7 @@ export default function Home() {
                 </CardItem>
               </CardBody>
             </CardContainer>
+            <TypewriterEffect words={words} />
           </div>
 
         </motion.h1>
@@ -73,6 +99,62 @@ export default function Home() {
   );
 
 }
+function Navbar({ className }: { className?: string }) {
+  const [active, setActive] = useState<string | null>(null);
+  return (
+    <div
+      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
+    >
+      <Menu setActive={setActive}>
+        <MenuItem setActive={setActive} active={active} item="Services">
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink href="/web-dev">Web Development</HoveredLink>
+            <HoveredLink href="/interface-design">Interface Design</HoveredLink>
+            <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
+            <HoveredLink href="/branding">Branding</HoveredLink>
+          </div>
+        </MenuItem>
+        <MenuItem setActive={setActive} active={active} item="Products">
+          <div className="  text-sm grid grid-cols-2 gap-10 p-4">
+            <ProductItem
+              title="Algochurn"
+              href="https://algochurn.com"
+              src="/HslogoCropped.jpg"
+              description="Prepare for tech interviews like never before."
+            />
+            <ProductItem
+              title="Tailwind Master Kit"
+              href="https://tailwindmasterkit.com"
+              src="/HslogoCropped.jpg"
+              description="Production ready Tailwind css components for your next project"
+            />
+            <ProductItem
+              title="Moonbeam"
+              href="https://gomoonbeam.com"
+              src="/HslogoCropped.jpg"
+              description="Never write from scratch again. Go from idea to blog in minutes."
+            />
+            <ProductItem
+              title="Rogue"
+              href="https://userogue.com"
+              src="/HslogoCropped.jpg"
+              description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+            />
+          </div>
+        </MenuItem>
+        <MenuItem setActive={setActive} active={active} item="Pricing">
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink href="/hobby">Hobby</HoveredLink>
+            <HoveredLink href="/individual">Individual</HoveredLink>
+            <HoveredLink href="/team">Team</HoveredLink>
+            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
+          </div>
+        </MenuItem>
+      </Menu>
+    </div>
+  );
+}
+
 const products = [
   {
     title: "",
@@ -190,26 +272,6 @@ const tabs = [
     content: (
       <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-cyan-500 to-blue-5000">
         <p>Services tab</p>
-        <DummyContent />
-      </div>
-    ),
-  },
-  {
-    title: "Playground",
-    value: "playground",
-    content: (
-      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-cyan-500 to-blue-5000">
-        <p>Playground tab</p>
-        <DummyContent />
-      </div>
-    ),
-  },
-  {
-    title: "Content",
-    value: "content",
-    content: (
-      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-cyan-500 to-blue-5000">
-        <p>Content tab</p>
         <DummyContent />
       </div>
     ),
