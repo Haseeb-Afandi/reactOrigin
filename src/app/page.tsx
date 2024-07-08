@@ -9,6 +9,7 @@ import { SparklesCore } from "@/components/ui/sparkles";
 import { HeroParallax } from "@/components/ui/hero-parralex";
 import { Tabs } from "@/components/ui/tabs";
 import { TypewriterEffect } from "@/components/ui/typewriter";
+import { BackgroundGradient } from "@/components/ui/backgroundGradient";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "@/components/ui/urtaHuaNavbar"
 import { cn } from "@/utils/cn";
 
@@ -86,20 +87,23 @@ export default function Home() {
         rangeY={800}
         particleCount={500}
         baseHue={120}
-        className="flex items-center flex-col justify-center px-2 md:px-10  py-4 w-full h-full"
+        className="flex items-center flex-col justify-between px-2 md:px-10  py-10 w-full h-full"
       >
         <h2 className="text-white text-2xl md:text-6xl font-bold text-center">
-          The hell is this?
+          Services
         </h2>
-        <p className="text-white text-sm md:text-2xl max-w-xl mt-6 text-center">
-          This is chemical burn. It&apos;ll hurt more than you&apos;ve ever been
-          burned and you&apos;ll have a scar.
+        <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-zinc-950">
+        <p className="text-white text-sm md:text-lg text-pretty">
+        At H3S, we specialize in delivering top-notch software solutions tailored to meet diverse business needs.
+         Our key services encompass the development of cutting-edge web applications, robust management systems, and comprehensive ERP software.
+          We excel in creating dynamic e-commerce applications that enhance online shopping experiences and cross-platform mobile apps that ensure seamless performance across various devices.
+           With a focus on innovation and quality, H3S is your trusted partner for all your software development needs.
         </p>
+        </BackgroundGradient>
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
-          <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
-            Order now
+          <button className="px-4 py-2 bg-[#089CFF] hover:bg-[#45b5ff] transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
+            Find out more
           </button>
-          <button className="px-4 py-2  text-white ">Watch trailer</button>
         </div>
       </Vortex>
 
