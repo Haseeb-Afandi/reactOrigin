@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -28,6 +30,18 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.iconColorPrimary{
+  background-color: #27a4f7;
+  color: black;
+}
+.iconGlow{
+  box-shadow: 0px 0px 10px 2px #27a4f7;
+}
+.satisfy{
+  font-family: "Satisfy";
+  text-shadow:  0px 0px 10px 2px #27a4f7;
 }
 
 .no-visible-scrollbar {

@@ -12,6 +12,9 @@ import { TypewriterEffect } from "@/components/ui/typewriter";
 import { BackgroundGradient } from "@/components/ui/backgroundGradient";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "@/components/ui/urtaHuaNavbar"
 import { cn } from "@/utils/cn";
+import { MdOutlineWeb } from "react-icons/md";
+import { AiOutlineMobile } from "react-icons/ai";
+import { FaPlus } from "react-icons/fa6";
 
 export default function Home() {
   const words = [
@@ -85,36 +88,92 @@ export default function Home() {
       <Vortex
         backgroundColor="transparent"
         rangeY={800}
-        particleCount={500}
+        particleCount={50}
         baseHue={120}
         className="flex items-center flex-col justify-between px-2 md:px-10  py-10 w-full h-full"
       >
-        <h2 className="text-white text-2xl md:text-6xl font-bold text-center">
+        <h2 className="text-white text-2xl md:text-6xl font-bold text-center mb-44">
           Services
         </h2>
-        <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-zinc-950">
-        <p className="text-white text-sm md:text-lg text-pretty">
-        At H3S, we specialize in delivering top-notch software solutions tailored to meet diverse business needs.
-         Our key services encompass the development of cutting-edge web applications, robust management systems, and comprehensive ERP software.
-          We excel in creating dynamic e-commerce applications that enhance online shopping experiences and cross-platform mobile apps that ensure seamless performance across various devices.
-           With a focus on innovation and quality, H3S is your trusted partner for all your software development needs.
-        </p>
-        </BackgroundGradient>
-        <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
-          <button className="px-4 py-2 bg-[#089CFF] hover:bg-[#45b5ff] transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
-            Find out more
-          </button>
+
+        <div className="w-full flex flex-wrap justify-evenly items-center mb-44">
+
+          <div className="p-4">
+            <BackgroundGradient className="py-10 m-6 sm:m-2 w-auto max-w-[400px] rounded-[22px] p-4 sm:p-10 bg-black bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-8">
+              <h2 className="text-5xl satisfy font-bold font-pretty w-full text-center mb-16">Web App</h2>
+              <div className="w-full flex justify-evenly items-center">
+                <MdOutlineWeb className="iconColorPrimary iconGlow rounded-3xl px-0 mb-12" size={"6.5rem"} />
+              </div>
+              <p className="text-white text-center text-sm md:text-base text-pretty rounded-sm">
+                At H3S, we specialize in delivering top-notch software solutions tailored to meet diverse business needs.
+                Our key services encompass the development of cutting-edge web applications, robust management systems, and comprehensive ERP software.
+                We excel in creating dynamic e-commerce applications that enhance online shopping experiences and cross-platform mobile apps that ensure seamless performance across various devices.
+                With a focus on innovation and quality, H3S is your trusted partner for all your software development needs.
+              </p>
+              <div className="w-full flex justify-center items-center gap-4 mt-6">
+                <button className="px-4 py-2 mt-12 mb-6 bg-[#089CFF] hover:bg-[#45b5ff] transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
+                  Find out more
+                </button>
+              </div>
+
+
+            </BackgroundGradient>
+          </div>
+          <div className="p-4">
+            <BackgroundGradient className="py-10 m-6 sm:m-2 w-auto max-w-[400px] rounded-[22px] p-4 sm:p-10 bg-black bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-8">
+              <h2 className="text-5xl satisfy font-bold font-pretty w-full text-center mb-16">Web & Mobile App</h2>
+              <div className="w-full flex justify-evenly items-center">
+                <MdOutlineWeb className="iconColorPrimary iconGlow rounded-3xl px-0 mb-12" size={"6.5rem"} />
+                <FaPlus className="iconColorPrimary iconGlow rounded-full px-0 mb-8" size={"2.5rem"} />
+                <AiOutlineMobile className="iconColorPrimary iconGlow rounded-3xl px-0 mb-8" size={"6.5rem"} />
+              </div>
+              <p className="text-white text-center text-sm md:text-base text-pretty rounded-sm">
+                At H3S, we specialize in delivering top-notch software solutions tailored to meet diverse business needs.
+                Our key services encompass the development of cutting-edge web applications, robust management systems, and comprehensive ERP software.
+                We excel in creating dynamic e-commerce applications that enhance online shopping experiences and cross-platform mobile apps that ensure seamless performance across various devices.
+                With a focus on innovation and quality, H3S is your trusted partner for all your software development needs.
+              </p>
+              <div className="w-full flex justify-center items-center gap-4 mt-6">
+                <button className="px-4 py-2 mt-12 mb-6 bg-[#089CFF] hover:bg-[#45b5ff] transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
+                  Find out more
+                </button>
+              </div>
+
+
+            </BackgroundGradient>
+          </div>
+          <div className="p-4">
+            <BackgroundGradient className="py-10 m-6 sm:m-2 w-auto max-w-[400px] rounded-[22px] p-4 sm:p-10 bg-black bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-8">
+              <h2 className="text-5xl satisfy font-bold font-pretty w-full text-center mb-16">Mobile App</h2>
+              <div className="w-full flex justify-evenly items-center">
+                <AiOutlineMobile className="iconColorPrimary iconGlow rounded-3xl px-0 mb-8" size={"6.5rem"} />
+              </div>
+              <p className="text-white text-center text-sm md:text-base text-pretty rounded-sm">
+                At H3S, we specialize in delivering top-notch software solutions tailored to meet diverse business needs.
+                Our key services encompass the development of cutting-edge web applications, robust management systems, and comprehensive ERP software.
+                We excel in creating dynamic e-commerce applications that enhance online shopping experiences and cross-platform mobile apps that ensure seamless performance across various devices.
+                With a focus on innovation and quality, H3S is your trusted partner for all your software development needs.
+              </p>
+              <div className="w-full flex justify-center items-center gap-4 mt-6">
+                <button className="px-4 py-2 mt-12 mb-6 bg-[#089CFF] hover:bg-[#45b5ff] transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
+                  Find out more
+                </button>
+              </div>
+
+
+            </BackgroundGradient>
+          </div>
+
+          <h2 className="text-white text-2xl md:text-6xl font-bold text-center w-full my-44">
+            Project Catalog
+          </h2>
+          <div className="h-full w-full bg-slate-950">
+            <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start">
+              <Tabs tabs={tabs} />
+            </div>
+          </div>
         </div>
       </Vortex>
-
-      <div className="bg-slate-950">
-        <HeroParallax products={products} />
-      </div>
-      <div className="h-full w-full bg-slate-950">
-        <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-40">
-          <Tabs tabs={tabs} />
-        </div>
-      </div>
 
 
     </main>
@@ -282,21 +341,21 @@ const DummyContent = () => {
 
 const tabs = [
   {
-    title: "Product",
-    value: "product",
+    title: "LMS",
+    value: "lms",
     content: (
       <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-cyan-500 to-blue-500">
-        <p>Product Tab</p>
+        <p>LMS</p>
         <DummyContent />
       </div>
     ),
   },
   {
-    title: "Services",
-    value: "services",
+    title: "Head n Tails",
+    value: "head n tails",
     content: (
       <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-cyan-500 to-blue-5000">
-        <p>Services tab</p>
+        <p>Head n Tails</p>
         <DummyContent />
       </div>
     ),
