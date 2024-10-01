@@ -15,6 +15,7 @@ import { cn } from "@/utils/cn";
 import { MdOutlineWeb } from "react-icons/md";
 import { AiOutlineMobile } from "react-icons/ai";
 import { FaPlus } from "react-icons/fa6";
+import { MessengerIcon } from "@/customComponents/MessengerIcon";
 
 export default function Home() {
   const words = [
@@ -40,6 +41,7 @@ export default function Home() {
   ];
   return (
     <main className="relative w-full h-screen bg-slate-950">
+      <MessengerIcon className="w-[105px] h-[105px] lg:pr-32 lg:pb-32 pr-16 pb-16" />
       <Navbar className="top-2" />
       <LampContainer>
         <motion.h1
@@ -61,7 +63,7 @@ export default function Home() {
                 maxSize={1.4}
                 particleDensity={100}
                 className="w-screen h-full"
-                particleColor="#089CFF"
+                particleColor="#26AAFD"
               />
             </div>
             <CardContainer className="inter-var z-10 -top-20 h-0 bottom-0">
@@ -173,9 +175,10 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <h2 className="text-blue-500 textGlow text-2xl md:text-6xl font-bold text-center w-full my-44">
+          Meet the Team!
+        </h2>
       </Vortex>
-
-
     </main>
     // <div>
     //   <SignupFormDemo />
