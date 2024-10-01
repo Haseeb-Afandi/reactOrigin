@@ -33,11 +33,45 @@ body {
 }
 
 .iconColorPrimary{
-  background-color: #27a4f7;
-  color: black;
+  color: #27a4f7;
+  background-color: rgba(0, 0, 0, 0);
 }
 .iconGlow{
   box-shadow: 0px 0px 10px 2px #27a4f7;
+}
+.textGlow{
+  text-shadow: 2px 4px 7px #27a4f7;
+}
+.textGlow2{
+  text-shadow: 2px 2px 7px #27a4f7;
+}
+.seesha{
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.seesha2{
+  background: rgba(0, 0, 0, 0.89);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.seesha3{
+  background: rgba(0, 0, 0, 0.89);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.seesha4{
+  background: #27a4f754;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 .satisfy{
   font-family: "Satisfy";

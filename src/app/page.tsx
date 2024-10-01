@@ -92,17 +92,17 @@ export default function Home() {
         baseHue={120}
         className="flex items-center flex-col justify-between px-2 md:px-10  py-10 w-full h-full"
       >
-        <h2 className="text-white text-2xl md:text-6xl font-bold text-center mb-44">
+        <h2 className="text-blue-500 textGlow text-2xl md:text-6xl font-bold text-center mb-44">
           Services
         </h2>
 
         <div className="w-full flex flex-wrap justify-evenly items-center mb-44">
 
           <div className="p-4">
-            <BackgroundGradient className="py-10 m-6 sm:m-2 w-auto max-w-[400px] rounded-[22px] p-4 sm:p-10 bg-black bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-8">
-              <h2 className="text-5xl satisfy font-bold font-pretty w-full text-center mb-16">Web App</h2>
+            <BackgroundGradient className="py-10 m-6 sm:m-2 w-auto max-w-[400px] rounded-[22px] p-4 sm:p-10 seesha2 bg-clip-padding">
+              <h2 className="text-5xl satisfy font-bold font-pretty w-full text-center mb-16 textGlow2">Web App</h2>
               <div className="w-full flex justify-evenly items-center">
-                <MdOutlineWeb className="iconColorPrimary iconGlow rounded-3xl px-0 mb-12" size={"6.5rem"} />
+                <MdOutlineWeb className="iconColorPrimary  rounded-3xl px-0 mb-12" size={"6.5rem"} />
               </div>
               <p className="text-white text-center text-sm md:text-base text-pretty rounded-sm">
                 At H3S, we specialize in delivering top-notch software solutions tailored to meet diverse business needs.
@@ -120,12 +120,12 @@ export default function Home() {
             </BackgroundGradient>
           </div>
           <div className="p-4">
-            <BackgroundGradient className="py-10 m-6 sm:m-2 w-auto max-w-[400px] rounded-[22px] p-4 sm:p-10 bg-black bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-8">
-              <h2 className="text-5xl satisfy font-bold font-pretty w-full text-center mb-16">Web & Mobile App</h2>
+            <BackgroundGradient className="py-10 m-6 sm:m-2 w-auto max-w-[400px] rounded-[22px] p-4 sm:p-10 seesha3">
+              <h2 className="text-5xl satisfy font-bold font-pretty w-full text-center mb-16 textGlow2">Web & Mobile App</h2>
               <div className="w-full flex justify-evenly items-center">
-                <MdOutlineWeb className="iconColorPrimary iconGlow rounded-3xl px-0 mb-12" size={"6.5rem"} />
-                <FaPlus className="iconColorPrimary iconGlow rounded-full px-0 mb-8" size={"2.5rem"} />
-                <AiOutlineMobile className="iconColorPrimary iconGlow rounded-3xl px-0 mb-8" size={"6.5rem"} />
+                <MdOutlineWeb className="iconColorPrimary  rounded-3xl px-0 mb-12" size={"6.5rem"} />
+                <FaPlus className="iconColorPrimary  rounded-full px-0 mb-8" size={"2.5rem"} />
+                <AiOutlineMobile className="iconColorPrimary  rounded-3xl px-0 mb-8" size={"6.5rem"} />
               </div>
               <p className="text-white text-center text-sm md:text-base text-pretty rounded-sm">
                 At H3S, we specialize in delivering top-notch software solutions tailored to meet diverse business needs.
@@ -143,10 +143,10 @@ export default function Home() {
             </BackgroundGradient>
           </div>
           <div className="p-4">
-            <BackgroundGradient className="py-10 m-6 sm:m-2 w-auto max-w-[400px] rounded-[22px] p-4 sm:p-10 bg-black bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-8">
-              <h2 className="text-5xl satisfy font-bold font-pretty w-full text-center mb-16">Mobile App</h2>
+            <BackgroundGradient className="py-10 m-6 sm:m-2 w-auto max-w-[400px] rounded-[22px] p-4 sm:p-10 seesha bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-8">
+              <h2 className="text-5xl satisfy font-bold font-pretty w-full text-center mb-16 text-[#27a4f7] textGlow2">Mobile App</h2>
               <div className="w-full flex justify-evenly items-center">
-                <AiOutlineMobile className="iconColorPrimary iconGlow rounded-3xl px-0 mb-8" size={"6.5rem"} />
+                <AiOutlineMobile className="iconColorPrimary  rounded-3xl px-0 mb-8" size={"6.5rem"} />
               </div>
               <p className="text-white text-center text-sm md:text-base text-pretty rounded-sm">
                 At H3S, we specialize in delivering top-notch software solutions tailored to meet diverse business needs.
@@ -164,7 +164,7 @@ export default function Home() {
             </BackgroundGradient>
           </div>
 
-          <h2 className="text-white text-2xl md:text-6xl font-bold text-center w-full my-44">
+          <h2 className="text-blue-500 textGlow text-2xl md:text-6xl font-bold text-center w-full my-44">
             Project Catalog
           </h2>
           <div className="h-full w-full bg-slate-950">
@@ -330,7 +330,7 @@ const products = [
 const DummyContent = () => {
   return (
     <Image
-      src="/HslogoCropped.jpg"
+      src="/LmsFrontPage.png"
       alt="dummy image"
       width="1000"
       height="1000"
@@ -344,17 +344,19 @@ const tabs = [
     title: "LMS",
     value: "lms",
     content: (
-      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-cyan-500 to-blue-500">
-        <p>LMS</p>
-        <DummyContent />
-      </div>
+      <a href="./lms">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white seesha4 cursor-pointer">
+          <p>LMS</p>
+          <DummyContent />
+        </div>
+      </a>
     ),
   },
   {
     title: "Head n Tails",
     value: "head n tails",
     content: (
-      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-cyan-500 to-blue-5000">
+      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white seesha4 cursor-pointer">
         <p>Head n Tails</p>
         <DummyContent />
       </div>
@@ -364,7 +366,7 @@ const tabs = [
     title: "Random",
     value: "random",
     content: (
-      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-cyan-500 to-blue-5000">
+      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white seesha4 cursor-pointer">
         <p>Random tab</p>
         <DummyContent />
       </div>
