@@ -17,7 +17,6 @@ import { AiOutlineMobile } from "react-icons/ai";
 import { FaPlus } from "react-icons/fa6";
 import { MessengerIcon } from "@/customComponents/MessengerIcon";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
-import { World } from "@/components/ui/globe";
 
 export default function Home() {
   const words = [
@@ -428,7 +427,7 @@ export default function Home() {
   ];
   return (
     <main className="relative w-full h-screen bg-slate-950">
-      <MessengerIcon className="w-[105px] h-[105px] lg:pr-32 lg:pb-32 pr-16 pb-16" />
+      {/* <MessengerIcon className="w-[105px] h-[105px] lg:pr-32 lg:pb-32 pr-16 pb-16 z-50" /> */}
 
       <SparklesCore
         id="tsparticlesfullpage"
@@ -601,34 +600,6 @@ export default function Home() {
             />
           </Card>
         </div>
-        <h2 className="text-white textGlow text-2xl md:text-6xl font-bold text-center w-full my-44">
-          Unlock your true potential!
-          <br />
-          Spread your business accross the globe!
-        </h2>
-        <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto relative w-full">
-          <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 20,
-              }}
-              animate={{
-                opacity: 1,
-                y: 0,
-              }}
-              transition={{
-                duration: 1,
-              }}
-              className="div"
-            >
-            </motion.div>
-            <div className="absolute w-full inset-x-0 h-40 pointer-events-none select-none z-40" />
-            <div className="absolute w-full h-72 md:h-full z-10">
-              <World data={sampleArcs} globeConfig={globeConfig} />
-            </div>
-          </div>
-        </div>
       </Vortex>
     </main>
     // <div>
@@ -706,7 +677,7 @@ const AceternityIcon = () => {
   );
 };
 
-export const Icon = ({ className, ...rest }: any) => {
+const Icon = ({ className, ...rest }: any) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
