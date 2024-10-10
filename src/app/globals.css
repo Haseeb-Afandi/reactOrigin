@@ -47,6 +47,13 @@ body {
     text-wrap: balance;
   }
 }
+.messengerBtn{
+  width: 65px;
+  height: 65px;
+  border: 2px solid #FFFF;
+  border-radius: 100%;
+  cursor: pointer;
+}
 
 .iconColorPrimary{
   color: #27a4f7;

@@ -16,7 +16,9 @@ import { MdOutlineWeb } from "react-icons/md";
 import { AiOutlineMobile } from "react-icons/ai";
 import { FaPlus } from "react-icons/fa6";
 import { MessengerIcon } from "@/customComponents/MessengerIcon";
-import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
+import { CanvasRevealEffect } from "../components/ui/canvas-reveal-effect";
+import Navbar from "@/customComponents/navbar";
+import Link from "next/link";
 
 export default function Home() {
   const words = [
@@ -427,7 +429,6 @@ export default function Home() {
   ];
   return (
     <main className="relative w-full h-screen bg-slate-950">
-      {/* <MessengerIcon className="w-[105px] h-[105px] lg:pr-32 lg:pb-32 pr-16 pb-16 z-50" /> */}
 
       <SparklesCore
         id="tsparticlesfullpage"
@@ -439,8 +440,10 @@ export default function Home() {
         particleColor="#26AAFD"
       />
 
+      {/* <MessengerIcon className="fixed lg:pr-32 lg:pb-32 pr-16 pb-16 z-[50]" /> */}
+
       <Navbar className="top-2" />
-      <LampContainer>
+      <LampContainer className="z-[6] bg-transparent">
         <motion.h1
           initial={{ opacity: 0.5, y: 100 }}
           whileInView={{ opacity: 1, y: -100 }}
@@ -566,39 +569,47 @@ export default function Home() {
           Meet the Team!
         </h2>
         <div className="py-20 flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black w-full gap-4 mx-auto px-8">
-          <Card title="M Haseeb Afandi" icon={<AceternityIcon />}>
-            <CanvasRevealEffect
-              animationSpeed={5.1}
-              containerClassName="bg-emerald-900"
-            />
-          </Card>
-          <Card title="Syed Hassan Raza" icon={<AceternityIcon />}>
-            <CanvasRevealEffect
-              animationSpeed={3}
-              containerClassName="bg-black"
-              colors={[
-                [236, 72, 153],
-                [232, 121, 249],
-              ]}
-              dotSize={2}
-            />
-            {/* Radial gradient for the cute fade */}
-            <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
-          </Card>
-          <Card title="M Hashir Azhar" icon={<AceternityIcon />}>
-            <CanvasRevealEffect
-              animationSpeed={3}
-              containerClassName="bg-sky-600"
-              colors={[[125, 211, 252]]}
-            />
-          </Card>
-          <Card title="M Saad Amir" icon={<AceternityIcon />}>
-            <CanvasRevealEffect
-              animationSpeed={3}
-              containerClassName="bg-sky-600"
-              colors={[[125, 211, 252]]}
-            />
-          </Card>
+          <Link href={"Haseeb"} className="w-[30%] min-w-64">
+            <Card title="M Haseeb Afandi" icon={<AceternityIcon />}>
+              <CanvasRevealEffect
+                animationSpeed={5.1}
+                containerClassName="bg-emerald-900"
+              />
+            </Card>
+          </Link>
+          <Link href={"Hassan"} className="w-[30%] min-w-64">
+            <Card title="Syed Hassan Raza" icon={<AceternityIcon />}>
+              <CanvasRevealEffect
+                animationSpeed={3}
+                containerClassName="bg-black"
+                colors={[
+                  [236, 72, 153],
+                  [232, 121, 249],
+                ]}
+                dotSize={2}
+              />
+              {/* Radial gradient for the cute fade */}
+              <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
+            </Card>
+          </Link>
+          <Link href={"Hashir"} className="w-[30%] min-w-64">
+            <Card title="M Hashir Azhar" icon={<AceternityIcon />}>
+              <CanvasRevealEffect
+                animationSpeed={3}
+                containerClassName="bg-sky-600"
+                colors={[[125, 211, 252]]}
+              />
+            </Card>
+          </Link>
+          <Link href={"Saad"} className="w-[30%] min-w-64">
+            <Card title="M Saad Amir" icon={<AceternityIcon />}>
+              <CanvasRevealEffect
+                animationSpeed={3}
+                containerClassName="bg-sky-600"
+                colors={[[125, 211, 252]]}
+              />
+            </Card>
+          </Link>
         </div>
       </Vortex>
     </main>
@@ -694,61 +705,7 @@ const Icon = ({ className, ...rest }: any) => {
 };
 // CARD REVEAL ENDS 
 
-function Navbar({ className }: { className?: string }) {
-  const [active, setActive] = useState<string | null>(null);
-  return (
-    <div
-      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
-    >
-      <Menu setActive={setActive}>
-        <MenuItem setActive={setActive} active={active} item="Services">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/web-dev">Web Development</HoveredLink>
-            <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-            <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-            <HoveredLink href="/branding">Branding</HoveredLink>
-          </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Products">
-          <div className="  text-sm grid grid-cols-2 gap-10 p-4">
-            <ProductItem
-              title="Algochurn"
-              href="https://algochurn.com"
-              src="/HslogoCropped.jpg"
-              description="Prepare for tech interviews like never before."
-            />
-            <ProductItem
-              title="Tailwind Master Kit"
-              href="https://tailwindmasterkit.com"
-              src="/HslogoCropped.jpg"
-              description="Production ready Tailwind css components for your next project"
-            />
-            <ProductItem
-              title="Moonbeam"
-              href="https://gomoonbeam.com"
-              src="/HslogoCropped.jpg"
-              description="Never write from scratch again. Go from idea to blog in minutes."
-            />
-            <ProductItem
-              title="Rogue"
-              href="https://userogue.com"
-              src="/HslogoCropped.jpg"
-              description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
-            />
-          </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Pricing">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/hobby">Hobby</HoveredLink>
-            <HoveredLink href="/individual">Individual</HoveredLink>
-            <HoveredLink href="/team">Team</HoveredLink>
-            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
-          </div>
-        </MenuItem>
-      </Menu>
-    </div>
-  );
-}
+
 
 const products = [
   {
