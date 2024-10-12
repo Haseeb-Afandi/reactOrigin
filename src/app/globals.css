@@ -35,7 +35,6 @@
 
 
 body {
-  color: rgb(var(--foreground-rgb));
   /* background: linear-gradient(to bottom,
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb)); */
@@ -69,8 +68,8 @@ body {
   text-shadow: 2px 2px 7px #27a4f7;
 }
 .portfolioSeesha{
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.945);
+  backdrop-filter: blur(4px);
 }
 .seesha{
   background: rgba(0, 0, 0, 0.7);
@@ -85,6 +84,9 @@ body {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+}
+.relativeForced{
+  position: relative;
 }
 .seesha3{
   background: rgba(0, 0, 0, 0.89);
