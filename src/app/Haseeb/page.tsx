@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import { LampContainer } from "../../components/ui/lamp";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3dCard";
 import { TypewriterEffect } from "@/components/ui/typewriter";
-import { FaAws, FaCss3Alt, FaDocker, FaHtml5, FaLinux, FaPhp, FaReact, FaUnity } from "react-icons/fa6";
+import { FaAws, FaCss3Alt, FaDocker, FaGithub, FaHtml5, FaLinkedin, FaLinkedinIn, FaLinux, FaPhp, FaReact, FaUnity } from "react-icons/fa6";
 import { TbBrandLaravel } from "react-icons/tb";
 import { VscTerminalLinux } from "react-icons/vsc";
 import { SiDotnet, SiFlutter, SiMysql, SiTailwindcss } from "react-icons/si";
@@ -28,6 +28,23 @@ export default function Haseeb() {
         {
             text: 'Afandi',
             className: "text-cyan-500 dark:text-blue-500",
+        },
+    ];
+    const work = [
+        {
+            text: "Full",
+            className: "text-cyan-500 dark:text-blue-500",
+        },
+        {
+            text: "-",
+            className: "text-cyan-500 dark:text-blue-500",
+        },
+        {
+            text: "Stack",
+            className: "text-cyan-500 dark:text-blue-500",
+        },
+        {
+            text: 'Developer',
         },
     ];
     return (
@@ -53,10 +70,16 @@ export default function Haseeb() {
                     <div className="z-20 md:col-span-4 md:p-4 pt-0 md:pt-0 rounded-xl w-full h-full flex justify-start md:justify-center items-center bg-[#00040E]">
                         <h2 className="text-2xl md:text-6xl font-bold text-center md:text-left w-auto">
                             <TypewriterEffect words={nameFull} className="md:pt-4"></TypewriterEffect>
+                            <span className="text-base"><TypewriterEffect words={work} className="md:pt-4"></TypewriterEffect></span>
                         </h2>
                     </div>
                 </div>
-
+                <div className="z-20 md:px-6 w-screen bg-black">
+                    <div className="z-20 w-full p-6 md:px-24 h-full min-w-56 md:mt-0 rounded-xl flex flex-wrap text-pretty text-center md:text-left text-white justify-center items-center">
+                        <FaGithub className="w-[30px] h-[30px] mx-4 rounded-full text-[#26AAFD]" />
+                        <FaLinkedin className="w-[30px] h-[30px] mx-4 rounded-full text-[#26AAFD]" />
+                    </div>
+                </div>
                 <div className="z-20 md:p-6 w-screen bg-black">
                     <div className="z-20 w-full p-6 md:py-12 md:px-24 h-full min-w-56 md:mt-0 rounded-xl text-pretty text-center md:text-left text-white items-center bg-[#00040E]">
                         At H3S, we specialize in delivering top-notch software solutions tailored to meet diverse business needs.
