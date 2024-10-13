@@ -16,6 +16,7 @@ import { AiOutlineLinux } from "react-icons/ai";
 import { Tabs } from "@/components/ui/tabs";
 import { GlareCard } from "@/components/ui/glare-card";
 import { Button } from "@/components/ui/moving-border";
+import Link from "next/link";
 
 export default function Haseeb() {
     const nameFull = [
@@ -48,7 +49,7 @@ export default function Haseeb() {
         },
     ];
     return (
-        <main className="relative w-full h-screen bg-slate-950 -z-10">
+        <main className="relative w-full h-screen bg-slate-950 z-0">
 
             <SparklesCore
                 id="tsparticlesfullpage"
@@ -74,18 +75,19 @@ export default function Haseeb() {
                         </h2>
                     </div>
                 </div>
-                <div className="z-20 md:px-6 w-screen bg-black">
-                    <div className="z-20 w-full p-6 md:px-24 h-full min-w-56 md:mt-0 rounded-xl flex flex-wrap text-pretty text-center md:text-left text-white justify-center items-center">
-                        <FaGithub className="w-[30px] h-[30px] mx-4 rounded-full text-[#26AAFD]" />
-                        <FaLinkedin className="w-[30px] h-[30px] mx-4 rounded-full text-[#26AAFD]" />
+                <div className="z-30 relative md:px-6 w-screen bg-black">
+                    <div className="z-30 w-full relative p-6 md:px-24 h-full min-w-56 md:mt-0 rounded-xl flex flex-wrap text-pretty text-center md:text-left text-white justify-center items-center">
+                        <Link className="z-30 relative cursor-pointer" href={"https://github.com/Haseeb-Afandi"}>
+                            <FaGithub className="z-30 w-[30px] h-[30px] mx-4 rounded-full text-[#26AAFD]" />
+                        </Link>
+                        <Link href={"https://www.linkedin.com/in/m-haseeb-afandi"}>
+                            <FaLinkedin className="w-[30px] h-[30px] mx-4 rounded-full text-[#26AAFD]" />
+                        </Link>
                     </div>
                 </div>
                 <div className="z-20 md:p-6 w-screen bg-black">
                     <div className="z-20 w-full p-6 md:py-12 md:px-24 h-full min-w-56 md:mt-0 rounded-xl text-pretty text-center md:text-left text-white items-center bg-[#00040E]">
-                        At H3S, we specialize in delivering top-notch software solutions tailored to meet diverse business needs.
-                        Our key services encompass the development of cutting-edge web applications, robust management systems, and comprehensive ERP software.
-                        We excel in creating dynamic e-commerce applications that enhance online shopping experiences and cross-platform mobile apps that ensure seamless performance across various devices.
-                        With a focus on innovation and quality, H3S is your trusted partner for all your software development needs.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, illo magni nesciunt non autem rerum maiores explicabo perspiciatis deleniti hic reiciendis amet iusto, voluptas maxime aspernatur eaque quasi ullam quaerat!
                     </div>
                 </div>
             </div>
@@ -159,7 +161,7 @@ export default function Haseeb() {
                             className="w-full bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
                             containerClassName="w-44 h-12 md:h-24 md:w-72 my-12 md:my-24"
                         >
-                            <p className="text-center text-base md:text-xl text-[#26AAFD] textGlow">Freelance</p>
+                            <p className="text-center text-base md:text-xl text-[#26AAFD] textGlow">Freelancer</p>
                         </Button>
 
                         <div className="z-30 absolute -left-2 md:-left-4">
@@ -176,16 +178,28 @@ export default function Haseeb() {
 
 const DummyContent = () => {
     return (
-        <div className="pb-12 md:pb-24">
+        <div className="md:h-full md:p-12 md:pt-24 flex flex-wrap justify-center items-center">
             <Image
                 src="/LmsFrontPage.png"
                 alt="dummy image"
                 width="1000"
                 height="1000"
-                className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
+                className="h-full md:h-full md:w-[70%] rounded-xl mx-auto"
             />
+            <div className="z-20 invisible md:visible md:w-1/4 md:h-72 md:py-6 relative ml-[4%] rounded-xl bg-black">
+                <h2 className="text-base text-white">Tech Stack</h2>
+                <div className="z-20 flex flex-wrap w-full justify-center bg-[#00040E]">
+                    <FaPhp className="w-[30px] h-[30px] md:m-4 rounded-full text-[#26AAFD]" />
+                    <SiMysql className="w-[30px] h-[30px] md:m-4 rounded-full text-[#26AAFD]" />
+                    <IoLogoJavascript className="w-[30px] h-[30px] md:m-4 rounded-full text-[#26AAFD]" />
+                    <FaCss3Alt className="w-[30px] h-[30px] md:m-4 rounded-full text-[#26AAFD]" />
+                    <FaHtml5 className="w-[30px] h-[30px] md:m-4 rounded-full text-[#26AAFD]" />
+                </div>
+                <h2 className="text-base text-white pt-6 bg-[#171B24]">ID: <span className="text-[#26AAFD]">student44</span></h2>
+                <h2 className="text-base text-white pb-6 bg-[#171B24]">Pass: <span className="text-[#26AAFD]">Student44365</span></h2>
+            </div>
         </div>
-    );
+    )
 };
 const tabs = [
     {
